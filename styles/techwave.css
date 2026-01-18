@@ -1,6 +1,7 @@
 
 @import "tailwindcss"
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 .inter-font{
   font-family:"Inter", sans-serif;}
@@ -53,7 +54,7 @@
   padding-top: 36px;
   padding-bottom: 36px;
   padding-left: 300px;
-  border-radius: 999px;
+
   
 
  }
@@ -65,6 +66,7 @@ position:relative;
 display: flex ;
 align-items: center;
 justify-content: center;
+border:2px solid white;
 }
 
 /* wave-bg */
@@ -72,6 +74,7 @@ justify-content: center;
 .hero-bg{
   position: absolute;
   background: url(../Images/hero-bg.png);
+  width:100%;
 }
  
 .hero-content{
@@ -113,17 +116,28 @@ justify-content: center;
   display: flex;
   justify-content: center;
   padding:10px 18px;
+  border: 5px;
   border-radius: 20px;
-  gap:8px;
+  gap:14px;
 
 }
 
 .btn-1 .btn-2{
   font:14px;
   color:#ffffff;
-  gap:8px;
-  display: inline-flex;
- 
 }
- 
-  
+
+.about{
+  padding:50px 200px 120px 200px;
+  border:2px solid white;
+
+}
+ .followers{
+  border:2px solid white;
+  list-style:none;
+  display: flex;
+  justify-content: space-around;
+  font:48px;
+  font-weight:bolder;
+  color:#00FF88;
+ }
