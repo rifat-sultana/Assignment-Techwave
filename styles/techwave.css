@@ -1,0 +1,129 @@
+
+@import "tailwindcss"
+
+
+.inter-font{
+  font-family:"Inter", sans-serif;}
+
+ * {
+  background-color:#1A0B2E;
+  color:white;
+ } 
+.menu{
+  color:white;
+ }
+
+ .topbar{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 200px; 
+  color:white;
+ }
+
+
+.logo{
+  width:219px;
+  height:32px;
+  font-size: 32px;
+  font-weight:700;
+  color:white;
+  padding-top:28px;
+   
+}
+.logo span{
+  background: linear-gradient( 90deg
+  #F7E93F, #FB09B4, #9100F8);
+  -webkit-background-clip: text;
+  display: inline-block;
+  overflow: visible ;
+}
+.menu{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: 16px;
+  font-family: 700;
+  gap:14px;
+  padding: 36px 300px 36px 320px;
+}
+
+ .btn{
+  display: flex;
+  font: 20px;
+  gap:5px;
+  padding-top: 36px;
+  padding-bottom: 36px;
+  padding-left: 300px;
+  border-radius: 999px;
+  
+
+ }
+
+ /* hero-section */
+.hero-section{
+height: 100vh;
+position:relative;
+display: flex ;
+align-items: center;
+justify-content: center;
+}
+
+/* wave-bg */
+
+.hero-bg{
+  position: absolute;
+  background: url(../Images/hero-bg.png);
+}
+ 
+.hero-content{
+  position:relative;
+  text-align: center;
+  z-index: index 2;
+ 
+}
+
+.circle-image{
+  width:350px;
+  height:350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:auto;
+}
+
+.m-image{
+  width:117px;
+  height:175px;
+}
+.hero-content h1{
+   font:60px;
+   color:#FFFFFF;
+   font-weight: bolder;
+   margin-top: 40px;
+   margin-bottom:8px;
+}
+
+  .hero-content p{
+  font:12px;
+  color:#FFFFFF;
+  font-weight: normal;
+  margin-bottom: 24px;
+  }
+
+.btn-types{
+  display: flex;
+  justify-content: center;
+  padding:10px 18px;
+  border-radius: 20px;
+  gap:8px;
+
+}
+
+.btn-1 .btn-2{
+  font:14px;
+  color:#ffffff;
+  gap:8px;
+  display: inline-flex;
+ 
+}
+ 
+  
