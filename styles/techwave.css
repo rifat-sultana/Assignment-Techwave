@@ -11,7 +11,7 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-/* Navbar CSS Starts Here!! */
+/* Navbar  */
 
 .topbar {
   display: flex;
@@ -148,6 +148,37 @@ body {
   height: 175px;
 }
 
+.logo-container{
+  position: relative;
+  display:inline-block;
+}
+
+.badge-new{
+  position: absolute;
+  top:-330px;
+  right:-155px;
+  background:#00FF88;
+  color:black;
+  font-size: 12px;
+  font-weight: 700;
+  padding:6px 14px;
+  border-radius: 15px;
+  text-transform: uppercase;
+  box-shadow:0 0 8px rgba(42,2255,90,0.8);
+  animation: pop 1.2s infinite;
+   @keyframs pop {
+    0% {
+      transform:scale(1);
+    }
+    50% {
+      transform:scale(1.15);
+    }
+    100%{
+      transform:scale(1);
+    }
+   }
+
+}
 .hero-content h1 {
   font: 60px;
   color: #FFFFFF;
@@ -396,7 +427,6 @@ The Approach is:
 
 .featured-videos {
   width: 100%;
-
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -409,7 +439,6 @@ The Approach is:
   flex-direction: column;
   justify-content: start;
   align-items: center;
-
   width: 380px;
   height: 440px;
   border-radius: 12px;
@@ -601,22 +630,18 @@ The Approach is:
   font-size: 16px;
   font-weight: 400;
   gap: 30px;
-
-  /* width: 544px; */
   height: 24px;
 
-  /* margin-bottom: 56px; */
+
 }
 
 .footer-icon-item {
   display: flex;
   align-items: center;
   flex-direction: row;
-
   gap: 10px;
+  margin:0 10px;
 
-  white-space: nowrap;
-  /
 }
 
 .copyright {
@@ -626,7 +651,6 @@ The Approach is:
   margin-top: 32px;
 }
 
-/* footer section done */
 
 
 
@@ -960,10 +984,15 @@ The Approach is:
   .footer-icon-box {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    gap: 20px;
   }
 
   .footer-icon-item {
     justify-content: center;
+  
   }
+
+.copyright{
+  font-size: 12px;
+}
 }
