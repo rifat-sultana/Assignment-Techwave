@@ -1,282 +1,969 @@
-
 @import "tailwindcss"
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-body{
-  font-family:"Inter", sans-serif;}
+body {
+  font-family: "Inter", sans-serif;
+}
 
- * {
-  background-color:#1A0B2E;
-  color:white;
-  font-family:"Inter", sans-serif;
- } 
-.menu{
-  color:white;
- }
+* {
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
 
- .topbar{
+/* Navbar CSS Starts Here!! */
+
+.topbar {
   display: flex;
+  width: 100%;
   justify-content: space-between;
-  margin: 10px 200px; 
-  color:white;
- }
-
-
-.logo{
-  width:219px;
-  height:32px;
-  font-size: 32px;
-  font-weight:700;
-  color:white;
-  padding-top:28px;
-   
-}
-.logo span{
-  background: linear-gradient( 90deg
-  #F7E93F, #FB09B4, #9100F8);
-  -webkit-background-clip: text;
-  display: inline-block;
-  overflow: visible ;
-}
-.menu{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  font-size: 16px;
-  font-family: 700;
-  gap:14px;
-  padding: 36px 300px 36px 320px;
+  align-items: center;
+  padding: 10px 200px;
+  height: 92px;
+  color: white;
+  background-color: #1A0B2E;
 }
 
- .btn{
+
+.logo {
   display: flex;
-  font: 20px;
-  gap:5px;
-  padding-top: 36px;
-  padding-bottom: 36px;
-  padding-left: 300px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 
-  
-
- }
-
- /* hero-section */
-.hero-section{
-height: 100vh;
-position:relative;
-display: flex ;
-align-items: center;
-justify-content: center;
-border:2px solid white;
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
 }
 
-/* wave-bg */
+.gradient-color {
+  background: linear-gradient(90deg, #F7E93F, #FB09B4, #9100F8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 
-.hero-bg{
+.menu {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  gap: 32px;
+  color: white;
+}
+
+.menu li {
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  width: 135px;
+  height: 44px;
+
+  /* pill shape */
+  padding: 24px 16px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+
+  /* gradient background */
+  background: linear-gradient(135deg,
+      #f4d03f 0%,
+      #e84393 35%,
+      #a100ff 100%);
+
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+/* Navbar CSS Ends & Hero Section CSS Starts Here!! */
+
+/* hero-section */
+.hero-section {
+  height: 81vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-top: white; */
+}
+
+.hero-bg {
   position: absolute;
+  display: flex;
+
+  /* horizontally center the image */
+  justify-content: center;
+
+  /* vertically center the image */
+  align-items: center;
+
   background: url(../Images/hero-bg.png);
-  width:100%;
+  background-size: cover;
+  background-position: center;
+
+  width: 100%;
+  height: 100%;
 }
- 
-.hero-content{
-  position:relative;
+
+.hero-content {
+  position: relative;
   text-align: center;
   z-index: index 2;
- 
+  background: transparent;
+  width: 550px;
+  height: 558px;
 }
 
-.circle-image{
-  width:350px;
-  height:350px;
+.circular-mic {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin:auto;
 }
 
-.m-image{
-  width:117px;
-  height:175px;
-}
-.hero-content h1{
-   font:60px;
-   color:#FFFFFF;
-   font-weight: bolder;
-   margin-top: 40px;
-   margin-bottom:8px;
+.m-image {
+  position: absolute;
+  /* Position relative to the nearest positioned ancestor (.hero-content), thus the mic positioned centered */
+  width: 117px;
+  height: 175px;
 }
 
-  .hero-content p{
-  font:12px;
-  color:#FFFFFF;
+.hero-content h1 {
+  font: 60px;
+  color: #FFFFFF;
+  font-weight: bolder;
+  margin-top: 40px;
+  margin-bottom: 8px;
+}
+
+.hero-content p {
+  font: 12px;
+  color: #FFFFFF;
   font-weight: normal;
   margin-bottom: 24px;
-  }
+}
 
-.btn-types{
+.btn-types {
   display: flex;
   justify-content: center;
-  padding:10px 18px;
-  border: 5px;
-  border-radius: 20px;
-  gap:14px;
+  /* border: 5px;
+  border-radius: 20px; */
+  gap: 14px;
+}
+
+.btn-1 {
+  display: inline-flex;
+  /* always use inline-flex for buttons */
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg,
+      #f4d03f 0%,
+      #e84393 35%,
+      #a100ff 100%);
+
+  border-radius: 999px;
+  padding: 12px 20px;
+  width: 201px;
+  height: 44px;
+
+  cursor: pointer;
+}
+
+.btn-2 {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 2px solid #00FF88;
+  width: 147px;
+  height: 44px;
+  border-radius: 999px;
+  padding: 12px 20px;
+
+  cursor: pointer;
 
 }
 
-.btn-1 .btn-2{
-  font:14px;
-  color:#ffffff;
+.btn-1 .btn-2 {
+  font: 14px;
+  color: #ffffff;
 }
 
-.about{
-  margin:50px 200px 120px 200px;
-  border:2px solid white;
+/* Hero Section CSS Ends Here!! & About Section Starts */
 
+.about {
+
+  padding: 70px 200px 120px 200px;
+  background-color: #1A0B2E;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 80px
 }
 
-.about-content{
-  margin:50px 200px 80px 200px;
+.about-content {
+  /* margin: 50px 200px 80px 200px; */
+  width: 1200px;
+  height: 222px;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
- .followers{
-  margin: 80px 200px 50px 200px;
-  border:2px solid white;
-  list-style:none;
+
+.followers {
+  width: 1200px;
+  height: 94px;
+  margin-left: 200px;
+  margin-right: 200px;
+
+
+  /* margin: 80px 200px 50px 200px; */
+  /* border: 2px solid yellowgreen; */
+  list-style: none;
   display: flex;
   justify-content: space-around;
-  font:48px;
-  font-weight:bolder;
-  color:#00FF88;
- }
-
-.choose-techwave h1{
-  font-size: 48px;
-  font-weight: bold;
-  padding:120px 200px 40px 200px;
-  text-align: center;
- 
-
+  font: 48px;
+  font-weight: bolder;
+  color: #00FF88;
 }
 
-.seclect-techwave>*{
-   background-color: #230E3D;
-   padding:40px 200px 120px 200px;
-   border-radius:5px;
-   
-}
-
-.seclect-techwave p{
-
-  background-color: #230E3D;
-
-}
-
-.headphone{
-  grid-area:headphone;
-
-}
-.device{
-  grid-area: device;
-  
-}
-.location{
-  grid-area: location;
-}
-
-.interviews{
-  grid-area:interviews;
-}
-
-.resource{
-  grid-area:resource;
-}
-
-.seclect-techwave{
-  display: grid;
-  gap:20px;
-  grid-template-areas: 
-    
-     "headphone device device"
-     "headphone location location"
-     "interviews interviews resource"
-}
-
-.host{
-  color:#230E3D;
-  background-color: #1A0B2E;
-  
-}
-
-
-.host-title{
-  margin: 120px 200px 40px 200px;
-  text-align: center;
-  font-size: 48px;
-  font-weight: bold;
-}
-
-.host-info{
+.followers-item {
   display: flex;
-  margin: 120px 200px 40px 200px;
-  gap:30px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-transform: uppercase;
+}
+
+.followers-item li {
+  font-size: 48px;
+  font-weight: bolder;
+  color: #00FF88;
+}
+
+.followers-item h5 {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+/* about section ends & choose techwave section starts here! */
+
+/* it becomes messy, so I am designing it from scratch */
+
+/* techwave-grid */
+
+/**
+We have to use a 3-column grid instead of a 2-column grid.
+The "Exclusive Interviews" card is wider than the "Premium Audio Quality" card above it. 
+By using 3 equal-width columns, we can make cards span either 1 or 2 columns to create that offset look.
+The Approach is: 
+1. Define 3 Columns: Set grid-template-columns: repeat(3, 1fr).
+2. Top-Left Card (headphone): Spans 2 rows and 1 column.
+3. Top-Right Cards (device, location): Spans 2 columns each and sit on top of each other.
+4. Bottom-Left Card (interviews): Spans 2 columns.
+5. Bottom-Right Card (resource): Spans 1 column.
+*/
+
+.choose-techwave {
+  background-color: rgb(35, 14, 61);
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  /* we can use one padding statement as well */
+}
+
+.choose-techwave h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  /* padding: 120px 200px 40px 200px; */
+  text-align: center;
+}
+
+.techwave-grid {
+  display: grid;
+
+  /*3 columns of equal width*/
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.headphone {
+  grid-column: 1 / 2;
+  /* Starts at col 1, ends at col 2 (takes 1 unit) */
+  grid-row: 1 / 3;
+  /* Spans across two vertical rows */
+}
+
+.device {
+  grid-column: 2 / 4;
+  /* Starts at col 2, ends at col 4 (takes 2 units) */
+}
+
+.location {
+  grid-column: 2 / 4;
+  /* Takes 2 units, sits directly under .device */
+}
+
+.interviews {
+  grid-column: 1 / 3;
+  /* Starts at col 1, ends at col 3 (takes 2 units) */
+}
+
+.resource {
+  grid-column: 3 / 4;
+  /* Takes the remaining 1 unit on the right */
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 40px;
+  padding: 40px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+
+}
+
+.techwave-grid h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.techwave-grid p {
+  color: rgb(255, 255, 255, 0.6);
+}
+
+/* techwave-grid ends & featured host starts here!*/
+
+.featured-host {
+  background-color: #1A0B2E;
+  width: 100%;
+  height: 1276px;
+
+  /* we need to organize the section*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* lets add padding */
+  padding: 120px 200px 120px 200px;
+  gap: 120px;
+}
+
+.podcast-feature {
+  width: 1200px;
+  height: 538px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 40px;
+}
+
+.featured-videos {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.video-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+  width: 380px;
+  height: 440px;
+  border-radius: 12px;
+}
+
+.video-frame {
+  height: 20vh;
+  width: 100%;
+  border-radius: 12px 12px 0px 0px;
+  aspect-ratio: 16 / 9; 
+  overflow: hidden;
+
+}
+
+
+.video-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: none;         
+}
+
+.text-frame {   
+  width: 100%;
+  border-radius:  0px 0px 12px 12px;
+  background-color: #250D44;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 8px;
+}
+
+.text-frame h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.text-frame p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.text-frame span {
+  color: #00FF88;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.text-frame h3 {
+  color: #00FF88;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+}
+
+.host {
+  width: 1200px;
+  height: 378px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.host-title {
+  /* padding: 120px 200px 40px 200px; */
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.host-info {
+  display: flex;
+  flex-direction: row;
   align-content: center;
-  color:#230E3D;
-  border: 2x solid white;
- 
+  gap: 40px;
+
+  background-color: rgba(53, 17, 101, 0.4);
+  border-radius: 40px;
+
+  padding: 40px;
 }
 
-
-.host-content h2{
- font-size:32px;
- font-weight: bold;
- padding:18px 40px 16px 24px;
+.host-image {
+  border-radius: 100%;
+  width: 40%;
 }
 
-.host-content p{
-  font-size:16px;
+.host-content {
+  /* width: 60%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.host-content h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.host-content p {
+  font-size: 16px;
   font-weight: 400;
-  padding:0 40px 16px 24px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.6);
 }
 
-
-.icon{
- display: flex;
- gap:50px;
- margin-bottom:24px;
- margin-left:16px;
- padding-right: 40px;
- 
+.icon-box {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  list-style: none;
+  /* Removes default bullet points */
+  padding: 0;
+  /* Removes default UL padding */
+  margin: 0;
 }
 
+.icon-wrapper {
+  width: 40px;
 
-.footer{
-  height: 475px;
-  margin-top: 120px;
-  border:2px solid;
-  background-image:url(../Images/footer-bg.png);
-  color:z
-  
+  height: 40px;
+  border: 1px solid #533C72;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s;
 }
-.footer h1{
+
+.icon-wrapper:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* footer section starts */
+
+.footer-bg {
+  position: absolute;
+  /*MUST to show the text over the image*/
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url(../Images/footer-bg.png);
+
+  /* These 3 property place the image at the center and scale it to fill the blank spaces */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 416px;
+  width: 100%;
+}
+
+.footer-content {
+  position: relative;
+  width: 1360px;
+  height: 172px;
+
+  margin: 120px;
+  /* as all side have same value , so using only that 120px value */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 32px; */
+}
+
+.footer-bg h1 {
   font-size: 60px;
   font-weight: bolder;
-  padding-top:80px;
-  margin:120ox 475px 212px 475px;
   text-align: center;
 }
 
-.footer-icon{
-  display:flex;
-  justify-content: center;
-  gap: 30px;
+.footer-icon-box {
+  display: flex;
   font-size: 16px;
-  font-weight:400;
+  font-weight: 400;
+  gap: 30px;
 
-  margin-bottom:56px;
+  /* width: 544px; */
+  height: 24px;
+
+  /* margin-bottom: 56px; */
 }
-.copyright{
+
+.footer-icon-item {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+  gap: 10px;
+
+  white-space: nowrap;
+  /
+}
+
+.copyright {
   font-size: 14px;
-  font-weight:400;
+  font-weight: 400;
   text-align: center;
-  margin: 0 120px 212px 120px;
+  margin-top: 32px;
+}
+
+/* footer section done */
+
+
+
+
+/* Responsive Media Queries */
+
+/* Large Device: above 992px */
+
+/* Medium Device: 576px to 992px (Optional) */
+@media (min-width: 576px) and (max-width: 992px) {
+
+  /* for navbar section responsiveness */
+
+  .topbar {
+    padding: 10px 50px;
+  }
+
+  /* for hero section responsiveness */
+
+  .hero-content {
+    width: 80%;
+  }
+
+  .hero-content h1 {
+    font-size: 48px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .circle-image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .m-image {
+    width: 100px;
+    height: 150px;
+  }
+
+  /* for about section responsiveness */
+
+  .about {
+    padding: 70px 50px 120px 50px;
+  }
+
+  .about-content {
+    width: 100%;
+  }
+
+  .followers {
+    width: 100%;
+    margin: 0;
+  }
+
+  /* for choose techwave section responsiveness */
+
+  .choose-techwave {
+    padding: 120px 50px;
+  }
+
+  .choose-techwave h1 {
+    font-size: 40px;
+  }
+
+  .techwave-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* for featured host section responsiveness */
+
+  .featured-host {
+    padding: 120px 50px;
+    height: auto;
+    gap: 80px;
+  }
+
+  .podcast-feature {
+    width: 100%;
+    height: auto;
+  }
+
+  .featured-videos {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .video-box {
+    width: 300px;
+    height: 350px;
+  }
+
+  .host {
+    width: 100%;
+    height: auto;
+  }
+
+  .host-info {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .host-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  /* for footer section responsiveness */
+
+  .footer-content {
+    width: 100%;
+    margin: 60px 20px;
+  }
+
+  .footer-icon-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Small Device: up to 576px */
+@media (max-width: 576px) {
+  .topbar {
+    padding: 10px 20px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .btn {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* for hero section responsiveness */
+  /*
+  The order property in CSS Flexbox controls the display sequence of flex items. Lower values appear first (e.g., order: 1 comes before order: 2). 
+  */
+
+  .hero-section {
+    height: auto;
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  .hero-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .circular-mic {
+    order: 1;
+  }
+
+  .header-text-section {
+    order: 2;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+    margin-top: 0;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .btn-types {
+    order: 3;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .btn-1, .btn-2 {
+    width: auto;
+    max-width: 200px;
+  }
+
+  .circle-image {
+    width: 250px;
+    height: 250px;
+  }
+
+  .m-image {
+    width: 80px;
+    height: 120px;
+  }
+
+  /* for about section responsiveness */
+
+  .about {
+    padding: 50px 20px 80px 20px;
+    gap: 40px;
+  }
+
+  .about-content {
+    width: 100%;
+    height: auto;
+  }
+
+  .about-content h1 {
+    font-size: 32px;
+  }
+
+  .followers {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .followers-item {
+    gap: 8px;
+  }
+
+  .followers-item li {
+    font-size: 32px;
+  }
+
+  .followers-item h5 {
+    font-size: 14px;
+  }
+
+  /* for choose techwave section responsiveness */
+
+  .choose-techwave {
+    padding: 80px 20px;
+  }
+
+  .choose-techwave h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .techwave-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card {
+    padding: 30px 20px;
+  }
+
+  /* for featured host section responsiveness */
+
+  .featured-host {
+    padding: 80px 20px;
+    height: auto;
+    gap: 60px;
+  }
+
+  .podcast-feature {
+    width: 100%;
+    height: auto;
+  }
+
+  .host-title {
+    font-size: 32px;
+  }
+
+  .featured-videos {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .video-box {
+    width: 100%;
+    height: auto;
+    max-width: 380px;
+  }
+
+  .video-frame {
+    height: 200px;
+  }
+
+  .host {
+    width: 100%;
+    height: auto;
+  }
+
+  .host-info {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .host-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .host-content {
+    align-items: center;
+  }
+
+  /* for footer section responsiveness */
+
+  .footer-bg {
+    height: auto;
+    min-height: 300px;
+  }
+
+  .footer-content {
+    width: 100%;
+    height: auto;
+    margin: 40px 20px;
+    gap: 20px;
+  }
+
+  .footer-bg h1 {
+    font-size: 40px;
+  }
+
+  .footer-icon-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .footer-icon-item {
+    justify-content: center;
+  }
 }
