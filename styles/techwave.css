@@ -175,6 +175,22 @@ body {
   margin-bottom: 8px;
 }
 
+/* animation  header-text*/
+  
+@keyframes glow {
+  0%,100% {
+    text-shadow: 0 0 5px rgb(192, 20, 140), 0 0 10px rgb(255, 81, 0);
+  }
+  50% {
+    text-shadow: 0 0 20px #00f, 0 0 40px #00f;
+  }
+}
+
+.hero-content h1 {
+  animation:  glow 2s infinite;
+}
+
+
 .hero-content p {
   font: 12px;
   color: #FFFFFF;
@@ -279,14 +295,39 @@ body {
   align-items: center;
   justify-content: center;
   gap: 16px;
-  text-transform: uppercase;
+ 
 }
 
 .followers-item li {
   font-size: 48px;
   font-weight: bolder;
   color: #00FF88;
+  text-transform: uppercase;
 }
+ 
+/* animation followers-item li  */
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+.followers-item li {
+  font-size: 48px;
+  font-weight: bolder;
+  color: #00FF88;
+  display: inline-block; 
+  animation: bounce 1.5s infinite;
+}
+
+
 
 .followers-item h5 {
   font-size: 16px;
