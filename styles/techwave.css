@@ -596,9 +596,7 @@ body {
   position: relative;
   width: 1360px;
   height: 172px;
-
   margin: 120px;
-  /* as all side have same value , so using only that 120px value */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -644,8 +642,6 @@ body {
 
 /* Responsive Media Queries */
 
-/* Large Device: above 992px */
-
 /* Medium Device: 576px to 992px (Optional) */
 @media (min-width: 576px) and (max-width: 992px) {
 
@@ -653,6 +649,7 @@ body {
 
   .topbar {
     padding: 10px 50px;
+   
   }
 
   /* for hero section responsiveness */
@@ -766,6 +763,7 @@ body {
 @media (max-width: 576px) {
   .topbar {
     padding: 10px 20px;
+    
   }
 
   .menu {
@@ -781,11 +779,7 @@ body {
   }
 
   /* for hero section responsiveness */
-  /*
-  The order property in CSS Flexbox controls the display sequence of flex items. Lower values appear first (e.g., order: 1 comes before order: 2). 
-  */
-
-  .hero-section {
+    .hero-section {
     height: auto;
     min-height: 100vh;
     padding: 20px;
