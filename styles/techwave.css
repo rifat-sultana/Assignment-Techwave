@@ -164,23 +164,11 @@ body {
   padding:6px 14px;
   border-radius: 15px;
   text-transform: uppercase;
-  box-shadow:0 0 8px rgba(42,2255,90,0.8);
-  animation: pop 1.2s infinite;
-   @keyframs pop {
-    0% {
-      transform:scale(1);
-    }
-    50% {
-      transform:scale(1.15);
-    }
-    100%{
-      transform:scale(1);
-    }
-   }
-
+  box-shadow:0 0 8px rgba(42,225,90,0.8);
+  
 }
 .hero-content h1 {
-  font: 60px;
+  font-size: 60px;
   color: #FFFFFF;
   font-weight: bolder;
   margin-top: 40px;
